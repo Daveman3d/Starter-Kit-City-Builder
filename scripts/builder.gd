@@ -11,7 +11,7 @@ var index:int = 0 # Index of structure being built
 @export var view_camera:Camera3D # Used for raycasting mouse
 @export var gridmap:GridMap
 @export var cash_display:Label
-
+@export var mesh_library:MeshLibrary
 var plane:Plane # Used for raycasting mouse
 
 func _ready():
@@ -22,7 +22,7 @@ func _ready():
 	# Create new MeshLibrary dynamically, can also be done in the editor
 	# See: https://docs.godotengine.org/en/stable/tutorials/3d/using_gridmaps.html
 	
-	var mesh_library = MeshLibrary.new()
+	mesh_library = MeshLibrary.new()
 	
 	for structure in structures:
 		

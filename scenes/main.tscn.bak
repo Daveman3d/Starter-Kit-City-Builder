@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://vgwrcfy1qawf"]
+[gd_scene load_steps=23 format=3 uid="uid://vgwrcfy1qawf"]
 
 [ext_resource type="Script" path="res://scripts/builder.gd" id="1_jybm7"]
 [ext_resource type="Environment" uid="uid://jbptgqvstei3" path="res://scenes/main-environment.tres" id="1_yndf3"]
@@ -21,9 +21,6 @@
 [ext_resource type="Resource" uid="uid://bqb6g3t0tebno" path="res://structures/building-garage.tres" id="13_ut2cy"]
 [ext_resource type="FontFile" uid="uid://d0cxd77jybrcn" path="res://fonts/lilita_one_regular.ttf" id="16_vlub6"]
 [ext_resource type="Texture2D" uid="uid://bng0d1sou7c8a" path="res://sprites/coin.png" id="17_cjamx"]
-[ext_resource type="Script" path="res://showfps.gd" id="20_fet1m"]
-[ext_resource type="Script" path="res://scenes/Objetos.gd" id="23_i8uq7"]
-[ext_resource type="Script" path="res://scenes/GridMapEdit.gd" id="24_kx2oc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_q176i"]
 font = ExtResource("16_vlub6")
@@ -94,51 +91,3 @@ offset_right = 270.0
 offset_bottom = 101.0
 text = "$10,000"
 label_settings = SubResource("LabelSettings_q176i")
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_right = 43.0
-offset_bottom = 23.0
-script = ExtResource("20_fet1m")
-
-[node name="TabContainer" type="TabContainer" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = 0.173
-anchor_right = 1.0
-offset_left = 0.70401
-offset_right = -444.0
-offset_bottom = 31.0
-grow_horizontal = 2
-all_tabs_in_front = true
-
-[node name="Ayuda" type="Button" parent="CanvasLayer/TabContainer"]
-layout_mode = 2
-
-[node name="Estructuras" type="Button" parent="CanvasLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-offset_left = 278.0
-offset_top = 3.0
-offset_right = -767.0
-offset_bottom = -614.0
-grow_horizontal = 2
-grow_vertical = 2
-text = "Estructuras"
-
-[node name="Objetos" type="Node3D" parent="CanvasLayer/Estructuras"]
-script = ExtResource("23_i8uq7")
-
-[node name="GridMapEdit" type="GridMap" parent="CanvasLayer/Estructuras/Objetos"]
-script = ExtResource("24_kx2oc")
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-anchors_preset = -1
-anchor_left = 1.0
-anchor_top = 5.25
-anchor_right = 62.5
-anchor_bottom = 49.875
-offset_left = -452.0
-offset_top = -3371.0
-offset_right = -943.0
-offset_bottom = -3728.0
-text = "Este apartado es de ayuda"
